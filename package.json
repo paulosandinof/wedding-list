@@ -2,6 +2,9 @@
   "name": "wedding-registry",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "body-parser": "latest",
     "concurrently": "^3.6.0",
