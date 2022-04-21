@@ -153,7 +153,7 @@ class ItemGrid extends React.Component {
           <Item
             key={"monetarygiftstart"}
             monetaryGift={true}
-            title={"Monetary Gift"}
+            title={"Dinheiro"}
             imageUrl={"/monetary-gift.png"}
             _id={"monetarygift"}
             available={true}
@@ -171,14 +171,14 @@ class ItemGrid extends React.Component {
               />);
             })
           }
-          <Item
+          {/* <Item
             key={"monetarygiftend"}
             monetaryGift={true}
-            title={"Monetary Gift"}
+            title={"Dinheiro"}
             imageUrl={"/monetary-gift.png"}
             _id={"monetarygift"}
             available={true}
-          />
+          /> */}
         </React.Fragment>
         }
       </div>

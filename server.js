@@ -157,7 +157,7 @@ app.post("/api/reserve/:id", (req, res) => {
           if(result.modifiedCount > 0){
             res.status(200).send({
               success: true,
-              message: "You have reserved this gift. You can undo this by clicking the 'Cancel Reservation' button beneath the item."
+              message: "Você reservou este presente. Você pode desfazer isto clicando no botão 'Cancelar Reserva' no botão abaixo do item"
             });
           }else{
             handleError(res, "No items modified in reservation request.", "No changes could be made.");
@@ -227,7 +227,7 @@ app.post("/api/cancel-reservation/:id", (req, res) => {
             if(result.modifiedCount > 0){
               res.status(200).send({
                 success: true,
-                message: "You have successfully cancelled your reservation to give this gift."
+                message: "Você cancelou a reserva deste item com sucesso."
               });
             }else{
               handleError(res, "No items modified in cancel reservation request.", "No changes could be made.");

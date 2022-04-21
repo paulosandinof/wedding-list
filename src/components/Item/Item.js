@@ -36,8 +36,8 @@ class Item extends React.Component {
           <img className="card-img-top item-image" rel="noreferrer" src={this.props.imageUrl} alt={"Image for " + this.props.title}/>
           <div className="card-body text-center">
             <h5 className="card-title item-title">{this.props.title}</h5>
-            <h6 className="card-title font-italic text-primary">{!this.props.available ? "Already Reserved" : ""}</h6>
-            <button onClick={this.showPopup} className="btn btn-primary item-button">{this.props.available ? "Give This Gift" : "Cancel Reservation"}</button>
+            <h6 className="card-title font-italic text-primary">{!this.props.available ? "Já Reservado" : ""}</h6>
+            <button onClick={this.showPopup} className="btn btn-primary item-button">{this.props.available ? "Escolher este presente" : "Cancelar Reserva"}</button>
           </div>
         </div>
       </div>

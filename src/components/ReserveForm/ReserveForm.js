@@ -123,7 +123,7 @@ class ReserveForm extends React.Component {
             <div className="modal-content">
               <div className="modal-header">
                 {!this.props.available &&
-                <h5 className="modal-title">Cancel reservation for {this.props.title}</h5>
+                <h5 className="modal-title">Cancelar reserva de {this.props.title}</h5>
                 }
                 {this.props.available &&
                 <h5 className="modal-title">Give {this.props.title}</h5>
@@ -140,31 +140,27 @@ class ReserveForm extends React.Component {
                 <React.Fragment>
                   {this.props.available &&
                   <div className="form-group">
-                    <label className={"w-100"} htmlFor={"form-name-" + this.props._id}>Name(s)</label>
+                    <label className={"w-100"} htmlFor={"form-name-" + this.props._id}>Nome(s)</label>
                     <input type="text" name={"name"} value={this.state.formValues["name"] || ""}
                            onChange={this.handleInputChange} required className="form-control"
                            id={"form-name-" + this.props._id} aria-describedby={"form-name-help-" + this.props._id}/>
-                    <small id={"form-name-help-" + this.props._id} className="form-text">Enter your name in case your
-                      card
-                      goes missing.
+                    <small id={"form-name-help-" + this.props._id} className="form-text">Digite seu nome.
                     </small>
                   </div>
                   }
 
                   <div className="form-group">
-                    <label className={"w-100"} htmlFor={"form-email-" + this.props._id}>Email address</label>
+                    <label className={"w-100"} htmlFor={"form-email-" + this.props._id}>Email</label>
                     <input type="email" autoComplete='email' required className="form-control"
                            id={"form-email-" + this.props._id} aria-describedby={"form-email-help-" + this.props._id}
                            value={this.state.formValues["email"] || ""} name={"email"}
                            onChange={this.handleInputChange}/>
                     {!this.props.available &&
-                    <small id={"form-email-help-" + this.props._id} className="form-text">Enter your email address to
-                      cancel this gift reservation.
+                    <small id={"form-email-help-" + this.props._id} className="form-text">Digite seu email para cancelar a reserva do presente.
                     </small>
                     }
                     {this.props.available &&
-                    <small id={"form-email-help-" + this.props._id} className="form-text">Enter your email address in
-                      case you need to cancel this gift reservation.
+                    <small id={"form-email-help-" + this.props._id} className="form-text">Digite seu email para caso você deseje cancelar a reserva do presente.
                     </small>
                     }
                   </div>
@@ -181,17 +177,17 @@ class ReserveForm extends React.Component {
               
               <div className="modal-footer">
                 {(this.state.resultSuccess === true || this.state.resultSuccess === false ) &&
-                <button type="button" onClick={this.closePopup} className="btn btn-primary">Close</button>
+                <button type="button" onClick={this.closePopup} className="btn btn-primary">Fechar</button>
                 }
                 {this.state.resultSuccess !== true &&
                 <React.Fragment>
                   {!this.props.available &&
-                  <button type="submit" disabled={this.state.ajaxState === "processing"} className="btn btn-primary">Cancel reservation
+                  <button type="submit" disabled={this.state.ajaxState === "processing"} className="btn btn-primary">Cancelar Reserva
                   </button>
                   }
                   {this.props.available &&
-                  <button type="submit" disabled={this.state.ajaxState === "processing"} className="btn btn-primary">I
-                    will be giving this gift
+                  <button type="submit" disabled={this.state.ajaxState === "processing"} className="btn btn-primary">
+                    Eu darei este presente
                   </button>
                   }
                 </React.Fragment>

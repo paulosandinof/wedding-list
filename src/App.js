@@ -5,7 +5,6 @@ import "./post-bootstrap.css";
 import ItemGrid from "./components/ItemGrid/ItemGrid";
 import Header from "./components/Header/Header";
 import Background from "./components/Background/Background";
-import Footer from "./components/Footer/Footer";
 import CuteSeparator from "./components/CuteSeparator/CuteSeparator";
 
 class App extends Component {
@@ -55,7 +54,6 @@ class App extends Component {
         <div className={"container-fluid"}>
           <ItemGrid ref={this.itemGridRef}/>
         </div>
-        <Footer/>
       </div>
     );
   }
